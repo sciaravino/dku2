@@ -1,0 +1,29 @@
+{
+  "type": "saved-model_report",
+  "params": {
+    "savedModelSmartId": "gw2S4e0k"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Prediction (RANDOM_FOREST_CLASSIFICATION) on modeling_table table",
+  "dashboardCreationId": "wCkrgTi",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1635363163888
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1635363163888
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

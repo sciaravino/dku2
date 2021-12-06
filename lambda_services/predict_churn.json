@@ -1,0 +1,50 @@
+{
+  "name": "predict_churn",
+  "endpoints": [
+    {
+      "modelRef": "gw2S4e0k",
+      "useJava": true,
+      "outputExplanations": false,
+      "individualExplanationParams": {
+        "method": "ICE",
+        "nbExplanations": 3,
+        "drawInScoredSet": false,
+        "subChunkSize": 5000,
+        "shapleyBackgroundSize": 100
+      },
+      "testQueries": [
+        {
+          "q": {
+            "features": {
+              "Acct_Plan_Type": "Standard",
+              "Avg_Talk_Hrs": 1,
+              "Acct_Age_Months": 23,
+              "Recent_Complaint": "Call Quality",
+              "Current_Bill_Range": "0-20",
+              "Percent_Incr_MOM": "15.4",
+              "Avg_Days_Delinquent": "27",
+              "State": "HAWAII",
+              "Headset_Age": "9+",
+              "Equipment_Age": "9+"
+            }
+          }
+        }
+      ],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "returnPostEnrichData": false,
+      "auditPostEnrichData": false,
+      "id": "predict_churn",
+      "type": "STD_PREDICTION"
+    }
+  ],
+  "publicAccess": true,
+  "authRealm": {
+    "queryKeys": []
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

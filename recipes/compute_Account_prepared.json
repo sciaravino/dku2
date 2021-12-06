@@ -1,0 +1,95 @@
+{
+  "type": "shaker",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "engineParams": {
+      "spark": {
+        "readParams": {
+          "mode": "AUTO",
+          "autoModeRepartitionInto": 10,
+          "map": {
+            "Account": {
+              "repartition": 10
+            }
+          }
+        },
+        "useGlobalMetastore": false,
+        "useNativeProcessors": true,
+        "sparkConfig": {
+          "inheritConf": "default",
+          "conf": []
+        },
+        "executionEngine": "SPARK_SUBMIT",
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true,
+        "skipPrerunValidate": false
+      },
+      "hive": {
+        "inheritConf": "default",
+        "hiveconf": [],
+        "executionEngine": "HIVESERVER2",
+        "addDkuUdf": false,
+        "skipPrerunValidate": false
+      },
+      "impala": {
+        "forceStreamMode": true
+      },
+      "hadoopConfigKeys": [],
+      "sqlPipelineParams": {
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true
+      },
+      "maxThreads": 8
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "Account",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "account_prepped",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "versionTag": {
+    "versionNumber": 14,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1635366670177
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1629056326525
+  },
+  "tags": [
+    "Prepare Data"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

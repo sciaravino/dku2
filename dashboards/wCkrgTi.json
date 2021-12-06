@@ -1,0 +1,161 @@
+{
+  "pages": [
+    {
+      "id": "9rc0DSz",
+      "grid": {
+        "tiles": [
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 0,
+              "left": 0,
+              "width": 3,
+              "height": 4
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "tileParams": {
+              "showXAxis": true,
+              "showYAxis": true,
+              "showLegend": false,
+              "showTooltips": true,
+              "autoPlayAnimation": true
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "4toks3n",
+            "insightType": "chart",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 0,
+              "left": 3,
+              "width": 7,
+              "height": 5
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "tileParams": {
+              "showXAxis": true,
+              "showYAxis": true,
+              "showLegend": false,
+              "showTooltips": true,
+              "autoPlayAnimation": true
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "ajYgeMp",
+            "insightType": "chart",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          }
+        ]
+      },
+      "title": "Data Exploration",
+      "showTitle": false
+    },
+    {
+      "id": "5eJJseh",
+      "grid": {
+        "tiles": [
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 7,
+              "left": 0,
+              "width": 9,
+              "height": 7
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "displayMode": "interactive_scoring",
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "Avg_Talk_Hrs",
+                    "Acct_Plan_Type",
+                    "Equipment_Age",
+                    "Current_Bill_Range",
+                    "Headset_Age",
+                    "Recent_Complaint",
+                    "State",
+                    "Percent_Incr_MOM",
+                    "Acct_Age_Months",
+                    "Avg_Days_Delinquent"
+                  ]
+                }
+              }
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "NWx5p6P",
+            "insightType": "saved-model_report",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 0,
+              "left": 0,
+              "width": 9,
+              "height": 7
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "displayMode": "tree_summary",
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "Avg_Talk_Hrs",
+                    "Acct_Plan_Type",
+                    "Equipment_Age",
+                    "Current_Bill_Range",
+                    "Headset_Age",
+                    "Recent_Complaint",
+                    "State",
+                    "Percent_Incr_MOM",
+                    "Acct_Age_Months",
+                    "Avg_Days_Delinquent"
+                  ]
+                }
+              }
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "bO5HHy2",
+            "insightType": "saved-model_report",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          }
+        ]
+      },
+      "title": "Model Exploration",
+      "showTitle": false
+    }
+  ],
+  "owner": "admin",
+  "listed": true,
+  "name": "High Level Insight",
+  "showGrid": true,
+  "versionTag": {
+    "versionNumber": 24,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1638455964014
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1629166410438
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

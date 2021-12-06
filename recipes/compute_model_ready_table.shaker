@@ -1,0 +1,130 @@
+{
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "explorationSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 10000,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "maxStoredBytes": 104857600,
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "timeout": -1
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "RemoveRowsOnEmpty",
+      "params": {
+        "columns": [
+          "Target_Churn"
+        ],
+        "keep": false,
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FilterOnValue",
+      "params": {
+        "normalizationMode": "EXACT",
+        "booleanMode": "AND",
+        "columns": [
+          "Target_Churn"
+        ],
+        "values": [
+          "."
+        ],
+        "matchingMode": "FULL_STRING",
+        "action": "REMOVE_ROW",
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [
+          "Recent_Complaint_flag"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "value": "0"
+      },
+      "alwaysShowComment": false
+    }
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "previewMode": "ALL_ROWS",
+  "vizSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": -1,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "FULL"
+    },
+    "autoRefreshSample": false
+  },
+  "analysisColumnData": {},
+  "columnWidthsByName": {
+    "Account_ID": 120,
+    "Acct_Plan_Type": 120,
+    "Headset_Age": 100,
+    "Equipment_Age": 113,
+    "Target_Churn": 105,
+    "Avg_Days_Delinquent": 158,
+    "Recent_Complaint_flag": 197,
+    "Recent_Complaint": 135,
+    "Avg_Talk_Hrs": 105,
+    "Acct_Age_Months": 128,
+    "State": 113,
+    "Current_Bill_Range": 150,
+    "Percent_Incr_MOM": 135
+  },
+  "sorting": [],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
+  }
+}

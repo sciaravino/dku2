@@ -1,0 +1,24 @@
+{
+  "name": "Customer Churn Wiki",
+  "layout": "WIKI_ARTICLE",
+  "attachments": [],
+  "versionTag": {
+    "versionNumber": 26,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1638467031360
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1635447317193
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

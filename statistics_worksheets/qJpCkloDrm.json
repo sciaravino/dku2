@@ -1,0 +1,812 @@
+{
+  "dataSpec": {
+    "inputDatasetSmartName": "master_table_psql",
+    "datasetSelection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "partitionSelectionMethod": "ALL",
+      "latestPartitionsN": 1,
+      "ordering": {
+        "enabled": false,
+        "rules": []
+      },
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "maxRecords": 100000,
+      "targetRatio": 0.02,
+      "withinFirstN": -1,
+      "maxReadUncompressedBytes": -1
+    },
+    "autoRefreshSample": true,
+    "refreshTrigger": 0,
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "rootCard": {
+    "type": "worksheet_root",
+    "confidenceLevel": 0.95,
+    "showConfidenceInterval": false,
+    "cards": [
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": true,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": true,
+        "showCumulativeDistributionFunction": false,
+        "xColumns": [
+          {
+            "name": "Acct_Age_Months",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Acct_Plan_Type",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "Avg_Days_Delinquent",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Avg_Talk_Hrs",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Current_Bill_Range",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "Equipment_Age",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "Headset_Age",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "Percent_Incr_MOM",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Recent_Complaint",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "Recent_Complaint_flag",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "Target_Churn",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Acct_Age_Months",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "Acct_Age_Months",
+                  "type": "CONTINUOUS"
+                },
+                "id": "Mcnd5zq"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Acct_Age_Months",
+                  "type": "CONTINUOUS"
+                },
+                "id": "bwAhcfV"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "Acct_Age_Months",
+                  "type": "CONTINUOUS"
+                },
+                "id": "8Yuj5VB"
+              }
+            ],
+            "id": "6bxZtwD"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Acct_Plan_Type",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "Acct_Plan_Type",
+                  "type": "CATEGORICAL"
+                },
+                "id": "XAV5oza"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Acct_Plan_Type",
+                  "type": "CATEGORICAL"
+                },
+                "id": "cBcoWc4"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "Acct_Plan_Type",
+                  "type": "CATEGORICAL"
+                },
+                "id": "yOVEMyV"
+              }
+            ],
+            "id": "Hqy0RsK"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Avg_Days_Delinquent",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "Avg_Days_Delinquent",
+                  "type": "CONTINUOUS"
+                },
+                "id": "PFNnasH"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Avg_Days_Delinquent",
+                  "type": "CONTINUOUS"
+                },
+                "id": "80lsgVp"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "Avg_Days_Delinquent",
+                  "type": "CONTINUOUS"
+                },
+                "id": "yFXDk5Y"
+              }
+            ],
+            "id": "4Zn25gT"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Avg_Talk_Hrs",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "Avg_Talk_Hrs",
+                  "type": "CONTINUOUS"
+                },
+                "id": "R22BwsI"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Avg_Talk_Hrs",
+                  "type": "CONTINUOUS"
+                },
+                "id": "TVLu8pK"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "Avg_Talk_Hrs",
+                  "type": "CONTINUOUS"
+                },
+                "id": "ujQo24J"
+              }
+            ],
+            "id": "y2Ayka5"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Current_Bill_Range",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "Current_Bill_Range",
+                  "type": "CATEGORICAL"
+                },
+                "id": "tiOKoS2"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Current_Bill_Range",
+                  "type": "CATEGORICAL"
+                },
+                "id": "WPeK46S"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "Current_Bill_Range",
+                  "type": "CATEGORICAL"
+                },
+                "id": "pOqaXXo"
+              }
+            ],
+            "id": "EQWM7JA"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Equipment_Age",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "Equipment_Age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "mHaBjm3"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Equipment_Age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "IquGuml"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "Equipment_Age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "eyamhFw"
+              }
+            ],
+            "id": "rzidRzc"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Headset_Age",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "Headset_Age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "8OFmOFA"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Headset_Age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "FvEej4d"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "Headset_Age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "UTO201a"
+              }
+            ],
+            "id": "5CGMWVa"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Percent_Incr_MOM",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "Percent_Incr_MOM",
+                  "type": "CONTINUOUS"
+                },
+                "id": "CP3q598"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Percent_Incr_MOM",
+                  "type": "CONTINUOUS"
+                },
+                "id": "KFDRSE4"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "Percent_Incr_MOM",
+                  "type": "CONTINUOUS"
+                },
+                "id": "YeNLo94"
+              }
+            ],
+            "id": "LPN1eZZ"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Recent_Complaint",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "Recent_Complaint",
+                  "type": "CATEGORICAL"
+                },
+                "id": "vIoyPzr"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Recent_Complaint",
+                  "type": "CATEGORICAL"
+                },
+                "id": "xEFSPBH"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "Recent_Complaint",
+                  "type": "CATEGORICAL"
+                },
+                "id": "QMr35NN"
+              }
+            ],
+            "id": "pqkTIxn"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Recent_Complaint_flag",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "Recent_Complaint_flag",
+                  "type": "CATEGORICAL"
+                },
+                "id": "hmKOD1g"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Recent_Complaint_flag",
+                  "type": "CATEGORICAL"
+                },
+                "id": "yX0VFyq"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "Recent_Complaint_flag",
+                  "type": "CATEGORICAL"
+                },
+                "id": "N3sDXVt"
+              }
+            ],
+            "id": "00Gdxso"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Target_Churn",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "Target_Churn",
+                  "type": "CATEGORICAL"
+                },
+                "id": "B4094qx"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Target_Churn",
+                  "type": "CATEGORICAL"
+                },
+                "id": "CoMgbqA"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "Target_Churn",
+                  "type": "CATEGORICAL"
+                },
+                "id": "eJ0BBSK"
+              }
+            ],
+            "id": "C7fO3bX"
+          }
+        ],
+        "id": "kudaffd"
+      }
+    ],
+    "id": "Tn4ZgSe"
+  },
+  "name": "Worksheet",
+  "versionTag": {
+    "versionNumber": 7,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1638453950070
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1637158868415
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

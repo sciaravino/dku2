@@ -1,0 +1,32 @@
+{
+  "tags": {
+    "deleted-recipe-editor": {},
+    "Score Data": {
+      "color": "#3cc21a"
+    },
+    "Build Model": {
+      "color": "#0f6d82"
+    },
+    "Demo Ready": {
+      "color": "#FFD83D"
+    },
+    "recipe-editor": {
+      "color": "#1ac2ab"
+    },
+    "imported": {
+      "color": "#263238"
+    },
+    "Prepare Data": {
+      "color": "#28aadd"
+    },
+    "Data Pull": {
+      "color": "#bf306c"
+    },
+    "Input Data": {
+      "color": "#1ac2ab"
+    },
+    "Export Step": {
+      "color": "#fc4769"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "type": "sync",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "schemaMode": "STRICT_SYNC",
+    "forcePipelineableForTests": false,
+    "engineParams": {
+      "maxThreads": 4,
+      "tdchParams": {
+        "splitMode": "DEFAULT",
+        "numberOfExecutors": 2
+      },
+      "sparkSQL": {
+        "overwriteOutputSchema": false,
+        "useGlobalMetastore": false,
+        "readParams": {
+          "mode": "AUTO",
+          "autoModeRepartitionInto": 10,
+          "map": {}
+        },
+        "sparkConfig": {
+          "inheritConf": "default",
+          "conf": []
+        },
+        "executionEngine": "SPARK_SUBMIT",
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true,
+        "skipPrerunValidate": false
+      },
+      "impala": {
+        "forceStreamMode": true
+      },
+      "hive": {
+        "inheritConf": "default",
+        "hiveconf": [],
+        "executionEngine": "HIVESERVER2",
+        "addDkuUdf": false,
+        "skipPrerunValidate": false
+      },
+      "sqlPipelineParams": {
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true
+      },
+      "lowerCaseSchemaIfEngineRequiresIt": false
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "score_data_scored",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "data_scored_snow",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "versionTag": {
+    "versionNumber": 2,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1635358434583
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1635273867176
+  },
+  "tags": [
+    "Export Step"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

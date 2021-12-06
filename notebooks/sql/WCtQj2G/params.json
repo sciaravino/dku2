@@ -1,0 +1,39 @@
+{
+  "connection": "PG",
+  "name": "Jordan\u0027s notebook on PostgreSQL",
+  "cells": [
+    {
+      "id": "yx8fnb573w",
+      "type": "QUERY",
+      "querySettings": {
+        "addLimitToStatement": true,
+        "statementsOutOfTransaction": false,
+        "inheritConf": "default",
+        "extraConf": [],
+        "addDkuUdf": false,
+        "statementsParseMode": "SPLIT",
+        "statementsExecutionMode": "PREPARED"
+      }
+    }
+  ],
+  "automationLocal": false,
+  "versionTag": {
+    "versionNumber": 1,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1637664711887
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1637664690886
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

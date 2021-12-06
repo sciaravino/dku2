@@ -1,0 +1,31 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "Master_Table",
+    "objectType": "DATASET",
+    "metricId": "basic:COUNT_COLUMNS"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Target_churn",
+  "dashboardCreationId": "wCkrgTi",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1629166701145
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1629166701145
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

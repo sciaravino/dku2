@@ -1,0 +1,148 @@
+{
+  "preFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "keys": [
+    {
+      "column": "Account_ID"
+    },
+    {
+      "column": "Acct_Plan_Type"
+    },
+    {
+      "column": "Avg_Talk_Hrs"
+    },
+    {
+      "column": "Acct_Age_Months"
+    },
+    {
+      "column": "Recent_Complaint"
+    },
+    {
+      "column": "Recent_Complaint_flag"
+    },
+    {
+      "column": "Target_Churn"
+    },
+    {
+      "column": "Current_Bill_Range"
+    },
+    {
+      "column": "Percent_Incr_MOM"
+    },
+    {
+      "column": "Avg_Days_Delinquent"
+    },
+    {
+      "column": "State"
+    },
+    {
+      "column": "Headset_Age"
+    },
+    {
+      "column": "Equipment_Age"
+    }
+  ],
+  "globalCount": false,
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVESERVER2"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "outputColumnNameOverrides": {},
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "Account_ID",
+            "type": "string"
+          },
+          {
+            "name": "Acct_Plan_Type",
+            "type": "string"
+          },
+          {
+            "name": "Avg_Talk_Hrs",
+            "type": "bigint"
+          },
+          {
+            "name": "Acct_Age_Months",
+            "type": "bigint"
+          },
+          {
+            "name": "Recent_Complaint",
+            "type": "string"
+          },
+          {
+            "name": "Recent_Complaint_flag",
+            "type": "bigint"
+          },
+          {
+            "meaning": "Boolean",
+            "name": "Target_Churn",
+            "type": "string"
+          },
+          {
+            "name": "Current_Bill_Range",
+            "type": "string"
+          },
+          {
+            "name": "Percent_Incr_MOM",
+            "type": "string"
+          },
+          {
+            "meaning": "LongMeaning",
+            "name": "Avg_Days_Delinquent",
+            "type": "string"
+          },
+          {
+            "name": "State",
+            "type": "string"
+          },
+          {
+            "name": "Headset_Age",
+            "type": "string"
+          },
+          {
+            "name": "Equipment_Age",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    },
+    "distinct": false,
+    "enabled": false
+  }
+}

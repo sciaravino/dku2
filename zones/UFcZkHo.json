@@ -1,0 +1,28 @@
+{
+  "name": "Export Tasks",
+  "color": "#F9BE40",
+  "items": [
+    {
+      "objectId": "compute_TskKjGJF",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "TskKjGJF",
+      "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "compute_data_scored_snow",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "data_scored_snow",
+      "objectType": "DATASET"
+    }
+  ],
+  "shared": [],
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

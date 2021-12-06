@@ -1,0 +1,64 @@
+{
+  "type": "python",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "envSelection": {
+      "envMode": "USE_BUILTIN_MODE",
+      "envName": "python3"
+    },
+    "containerSelection": {
+      "containerMode": "EXPLICIT_CONTAINER"
+    },
+    "skipPrerunValidate": false
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "master_table_psql",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "modeling_table",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "versionTag": {
+    "versionNumber": 133,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1637095014283
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1629057538732
+  },
+  "tags": [
+    "Prepare Data"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

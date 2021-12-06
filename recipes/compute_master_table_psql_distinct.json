@@ -1,0 +1,61 @@
+{
+  "type": "sql_query",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "allowMultipleConnections": false,
+    "displayExecutionPlan": true,
+    "sqlPipelineParams": {
+      "pipelineAllowStart": true,
+      "pipelineAllowMerge": true
+    },
+    "skipPrerunValidate": false
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "master_table_psql",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "master_table_psql_distinct",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "versionTag": {
+    "versionNumber": 3,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1635362379054
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1635362358267
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

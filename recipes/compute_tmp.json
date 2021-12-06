@@ -1,0 +1,60 @@
+{
+  "type": "join",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "account_prepped",
+          "deps": []
+        },
+        {
+          "ref": "billing",
+          "deps": []
+        },
+        {
+          "ref": "equipment",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "master_table_psql",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "versionTag": {
+    "versionNumber": 11,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1637016038335
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1635963436092
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

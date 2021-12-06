@@ -1,0 +1,24 @@
+{
+  "name": "Sample DSS Wiki",
+  "layout": "WIKI_ARTICLE",
+  "attachments": [],
+  "versionTag": {
+    "versionNumber": 1,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1635447269047
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1635447184094
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

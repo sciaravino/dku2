@@ -1,0 +1,289 @@
+{
+  "dashboardAuthorizations": {
+    "allAuthorized": false,
+    "authorizations": [
+      {
+        "objectRef": {
+          "objectId": "Master_Table",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "Account_prepared",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "gw2S4e0k",
+          "objectType": "SAVED_MODEL"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "master_table_psql",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      }
+    ]
+  },
+  "exposedObjects": {
+    "objects": []
+  },
+  "projectType": "REGULAR",
+  "projectAppType": "REGULAR",
+  "owner": "admin",
+  "permissionsVersion": "LEGACY",
+  "permissions": [],
+  "additionalDashboardUsers": {
+    "users": []
+  },
+  "tutorialProject": false,
+  "settings": {
+    "flowAnchorSourcesAndSinks": true,
+    "flowDisplaySettings": {
+      "zonesGraphRenderingAlgorithm": "DOT_OLDRANK",
+      "zonesGraphConnectZones": true
+    },
+    "gitCommitMode": "AUTO",
+    "disableAutomaticTriggers": false,
+    "integrations": {
+      "integrations": []
+    },
+    "flowBuildSettings": {
+      "mergeSparkPipelines": false,
+      "pruneBeforeSparkPipelines": true,
+      "mergeSqlPipelines": false,
+      "pruneBeforeSqlPipelines": true
+    },
+    "limitsSettings": {
+      "memSampleBytes": {
+        "soft": -1,
+        "hard": -1
+      },
+      "shakerMemTableBytes": {
+        "soft": -1,
+        "hard": -1
+      },
+      "attachmentBytes": {
+        "soft": -1,
+        "hard": -1
+      }
+    },
+    "relocationSettings": {
+      "sqlLikeRecipesInitializationMode": "RESOLVED_TABLE_REFERENCES"
+    },
+    "recipeEnginesPreferences": {
+      "forbiddenEngines": [],
+      "enginesPreferenceOrder": [],
+      "forbiddenByRecipeType": {},
+      "preferenceByRecipeType": {}
+    },
+    "codeEnvs": {
+      "python": {
+        "mode": "INHERIT",
+        "preventOverride": false
+      },
+      "r": {
+        "mode": "INHERIT",
+        "preventOverride": false
+      },
+      "julia": {
+        "mode": "INHERIT",
+        "preventOverride": false
+      }
+    },
+    "container": {
+      "containerMode": "INHERIT"
+    },
+    "datasetsCreationSettings": {
+      "useGlobal": true,
+      "preferedStorageFormats": "CSV_ESCAPING_NOGZIP_FORHIVE,CSV_EXCEL_GZIP,PARQUET_HIVE",
+      "virtualizable": false,
+      "allowUploadsWithoutConnection": true
+    },
+    "hiveEngineCreationSettings": {
+      "useGlobal": true,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "sparkEngineCreationSettings": {
+      "useGlobal": true,
+      "executionEngine": "SPARK_SUBMIT",
+      "useGlobalMetastore": false
+    },
+    "impalaEngineCreationSettings": {
+      "useGlobal": true,
+      "streamMode": true
+    },
+    "wikiSettings": {
+      "promoted": false
+    },
+    "cluster": {
+      "clusterMode": "INHERIT"
+    },
+    "k8sCluster": {
+      "clusterMode": "INHERIT"
+    },
+    "virtualWebAppBackendSettings": {
+      "mode": "INHERIT",
+      "preventOverride": false,
+      "infra": {
+        "containerSelection": {
+          "containerMode": "INHERIT"
+        },
+        "overrideGlobalK8sExposition": false,
+        "exposition": {
+          "type": "local_process",
+          "params": {}
+        },
+        "scaling": {
+          "initialReplicas": 1,
+          "hpa": false,
+          "hpaTargetCPUPercent": 0,
+          "hpaMetrics": [],
+          "hpaMinPods": 0,
+          "hpaMaxPods": 0,
+          "hpaAnnotations": []
+        },
+        "deploymentModifier": {}
+      }
+    }
+  },
+  "name": "Customer Churn",
+  "imgPattern": 7,
+  "showInitials": false,
+  "metrics": {
+    "probes": [],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": []
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "versionTag": {
+    "versionNumber": 42,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1638827675152
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1629052217843
+  },
+  "description": "\u003ch1\u003e Customer Churn Project Description\u003c/h1\u003e\nThis project was created to predict customer churn. The project pulls data in from various disparate sources, joins them together, and applies data cleansing techniques to the joined table prior to performing any analysis.\n\nAfter cleansing the data, we began exploring it to identify any trends, outliers, or other statistical anomalies. \n\nFinally, various models were built and a champion (Random Forrest) selected. The model can be continuously monitored to ensure it\u0027s performance. Additionally, new data can be imported and used for retraining or scored against the current champion model.   ",
+  "shortDesc": "The project *Customer Churn* was created by Administrator on Aug 15th 2021",
+  "tags": [
+    "imported",
+    "Demo Ready"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": [
+      {
+        "id": "1e1987",
+        "title": "Todo list 2",
+        "createdOn": 0,
+        "items": [
+          {
+            "done": true,
+            "text": "Wrangle disparate data",
+            "createdOn": 1629163742402,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Join data together and manipulate variables",
+            "createdOn": 1629163783045,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Perform various calculations (code or visual)",
+            "createdOn": 1629163812927,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Deploy model into prod",
+            "createdOn": 1629163815679,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "Analyze model for drift",
+            "createdOn": 1638467288678,
+            "createdBy": "Jordan",
+            "stateChangedOn": 0
+          }
+        ]
+      }
+    ]
+  }
+}

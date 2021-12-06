@@ -1,0 +1,190 @@
+{
+  "projectKey": "CUSTOMERCHURN",
+  "id": "CHURN_SCENARIO",
+  "type": "step_based",
+  "name": "Churn_Scenario",
+  "active": false,
+  "creationTag": {
+    "versionNumber": 9,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1638454397304
+  },
+  "versionTag": {
+    "versionNumber": 10,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1638827675172
+  },
+  "checklists": {
+    "checklists": []
+  },
+  "delayedTriggersBehavior": {
+    "delayWhileRunning": true,
+    "squashDelayedTriggers": true,
+    "suppressTriggersWhileRunning": true
+  },
+  "tags": [],
+  "triggers": [
+    {
+      "id": "n1P1dfI3",
+      "type": "temporal",
+      "name": "Daily-Execution",
+      "delay": 5,
+      "active": false,
+      "params": {
+        "repeatFrequency": 1,
+        "frequency": "Daily",
+        "startingFrom": "2021-10-27T15:14:00.000Z",
+        "daysOfWeek": [
+          "Wednesday"
+        ],
+        "minute": 0,
+        "hour": 7,
+        "timezone": "SERVER"
+      }
+    },
+    {
+      "id": "sfIJzGKI",
+      "type": "ds_modified",
+      "name": "Dataset-Updated",
+      "delay": 900,
+      "active": false,
+      "params": {
+        "watches": [],
+        "triggerWhenAllFire": false
+      },
+      "graceDelaySettings": {
+        "delay": 120,
+        "checkAgainAfterGraceDelay": true
+      }
+    }
+  ],
+  "reporters": [
+    {
+      "active": true,
+      "messaging": {
+        "type": "slack-scenario",
+        "configuration": {
+          "message": "DSS Scenario \u003c${scenarioRunURL}|${scenarioName}\u003e triggered by ${triggerName} : ${outcome} ${if(outcome \u003d\u003d \u0027SUCCESS\u0027, \u0027:white_check_mark:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027FAILED\u0027, \u0027:red_circle:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027WARNING\u0027, \u0027:red_circle:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027\u0027 || outcome \u003d\u003d \u0027N/A\u0027, \u0027:bell:\u0027, \u0027\u0027)}",
+          "messageMode": "TEXT_MESSAGE",
+          "blocks": "[\n    {\n        \"type\": \"section\",\n        \"text\": {\n            \"type\": \"mrkdwn\",\n            \"text\": \"*DSS Scenario \u003c${scenarioRunURL}|${scenarioName}\u003e:* ${outcome} ${if(outcome \u003d\u003d \u0027SUCCESS\u0027, \u0027:white_check_mark:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027FAILED\u0027, \u0027:red_circle:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027WARNING\u0027, \u0027:red_circle:\u0027, \u0027\u0027)}${if(outcome \u003d\u003d \u0027\u0027 || outcome \u003d\u003d \u0027N/A\u0027, \u0027:bell:\u0027, \u0027\u0027)}\"\n        }\n    },\n    {\n        \"type\": \"context\",\n        \"elements\": [\n            {\n                \"type\": \"mrkdwn\",\n                \"text\": \"Triggered by ${triggerName}\"\n            }\n        ]\n    }\n]\n",
+          "mode": "WEBHOOK",
+          "webhookUrl": "https://hooks.slack.com/services/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",
+          "useProxy": true,
+          "asUser": false,
+          "linkNames": false
+        }
+      },
+      "id": "UaTotHy4",
+      "name": "Slack-Me",
+      "runConditionEnabled": false,
+      "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
+      "phase": "END"
+    },
+    {
+      "active": true,
+      "messaging": {
+        "type": "mail-scenario",
+        "configuration": {
+          "subject": "DSS scenario ${scenarioName}: ${outcome}",
+          "sender": "jordan.green@dataiku.com",
+          "recipient": "jordan.green@dataiku.com",
+          "sendAsHTML": false,
+          "attachments": [],
+          "messageSource": "TEMPLATE_FILE",
+          "templateFormat": "FREEMARKER",
+          "templateName": "default.ftl"
+        }
+      },
+      "id": "8DL0IKQe",
+      "name": "Email-Me",
+      "runConditionEnabled": false,
+      "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
+      "phase": "END"
+    }
+  ],
+  "params": {
+    "steps": [
+      {
+        "id": "build_0_true_d_data_scored_snow",
+        "type": "build_flowitem",
+        "name": "Batch Score Holdout Sample",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "data_scored_snow"
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "check_false_d_master_table_psql",
+        "type": "check_dataset",
+        "name": "Check for Invalid Data",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "checks": [
+            {
+              "type": "DATASET",
+              "itemId": "master_table_psql",
+              "partitionsSpec": ""
+            }
+          ],
+          "warningsAsErrors": false,
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_m_gw2S4e0k",
+        "type": "build_flowitem",
+        "name": "Retrain Model",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "SAVED_MODEL",
+              "itemId": "gw2S4e0k",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      }
+    ]
+  },
+  "automationLocal": false,
+  "customFields": {}
+}

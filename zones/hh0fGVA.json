@@ -1,0 +1,32 @@
+{
+  "name": "Holdout Sample to Score",
+  "color": "#C82423",
+  "items": [
+    {
+      "objectId": "score_new_data",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_score_new_data_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "score_new_data_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_score_data",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "score_data",
+      "objectType": "DATASET"
+    }
+  ],
+  "shared": [],
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

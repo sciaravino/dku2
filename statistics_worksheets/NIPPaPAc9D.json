@@ -1,0 +1,55 @@
+{
+  "dataSpec": {
+    "inputDatasetSmartName": "account_prepped",
+    "datasetSelection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "partitionSelectionMethod": "ALL",
+      "latestPartitionsN": 1,
+      "ordering": {
+        "enabled": false,
+        "rules": []
+      },
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "maxRecords": 100000,
+      "targetRatio": 0.02,
+      "withinFirstN": -1,
+      "maxReadUncompressedBytes": -1
+    },
+    "autoRefreshSample": true,
+    "refreshTrigger": 0,
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "rootCard": {
+    "type": "worksheet_root",
+    "confidenceLevel": 0.95,
+    "showConfidenceInterval": false,
+    "cards": [],
+    "id": "uY7TK4u"
+  },
+  "name": "Worksheet",
+  "versionTag": {
+    "versionNumber": 5,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1638458231008
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "Jordan"
+    },
+    "lastModifiedOn": 1635865239896
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

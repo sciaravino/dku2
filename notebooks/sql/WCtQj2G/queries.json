@@ -1,0 +1,402 @@
+{
+  "queries": {
+    "yx8fnb573w": [
+      {
+        "mode": "SQL",
+        "id": "zfSe3ROanMRE",
+        "runOn": 1637664965242,
+        "runIn": 53,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "LpPnf6H1",
+        "hash": "d2d65a3de785d1c8b57acddff3c308c1",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\"\nwhere state \u003d \"NC\" and avg_days_delinquent \u003e 10\ngroup by target_churn",
+        "expandedSql": "select * from \"dku_demo\".\"billing\"\nwhere state \u003d \"NC\" and avg_days_delinquent \u003e 10\ngroup by target_churn"
+      },
+      {
+        "mode": "SQL",
+        "id": "Oje0x3VxWU1H",
+        "runOn": 1637664974172,
+        "runIn": 20,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "QfvVTzf4",
+        "hash": "1e947f4f9d425779b605cf85c7f4360b",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\"\nwhere State \u003d \"NC\" and avg_days_delinquent \u003e 10\ngroup by target_churn",
+        "expandedSql": "select * from \"dku_demo\".\"billing\"\nwhere State \u003d \"NC\" and avg_days_delinquent \u003e 10\ngroup by target_churn"
+      },
+      {
+        "mode": "SQL",
+        "id": "NvN2lfayWb53",
+        "runOn": 1637665000571,
+        "runIn": 23,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "1OvHMLjK",
+        "hash": "ce4b97d0420002645d629c15c2444514",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" as t1\nwhere t1.state \u003d \"NC\" and t1.avg_days_delinquent \u003e 10\ngroup by t1.target_churn",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" as t1\nwhere t1.state \u003d \"NC\" and t1.avg_days_delinquent \u003e 10\ngroup by t1.target_churn"
+      },
+      {
+        "mode": "SQL",
+        "id": "Ctu4mkZipNfW",
+        "runOn": 1637665029047,
+        "runIn": 18,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "gqwyNMCA",
+        "hash": "f95c2a16eba2348589d3a8acbf4a9b12",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" as t1\nwhere \"State\" \u003d \"NC\" and \"Avg_Days_Delinquent\" \u003e 10\ngroup by \"Target_Churn\"",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" as t1\nwhere \"State\" \u003d \"NC\" and \"Avg_Days_Delinquent\" \u003e 10\ngroup by \"Target_Churn\""
+      },
+      {
+        "mode": "SQL",
+        "id": "pyGvUtxnRN8o",
+        "runOn": 1637665046173,
+        "runIn": 30,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "aDO9j628",
+        "hash": "9a0448a69d03652f094a54df7645076b",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" as t1\nwhere \"State\" \u003d \u0027NC\u0027 and \"Avg_Days_Delinquent\" \u003e 10\ngroup by \"Target_Churn\"",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" as t1\nwhere \"State\" \u003d \u0027NC\u0027 and \"Avg_Days_Delinquent\" \u003e 10\ngroup by \"Target_Churn\""
+      },
+      {
+        "mode": "SQL",
+        "id": "JqBA9M0LDnPp",
+        "runOn": 1637665064704,
+        "runIn": 20,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "pOhTWeIb",
+        "hash": "580e6849266abe952c2c1feb53d927f5",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" as t1\nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 and \"Avg_Days_Delinquent\" \u003e 10\ngroup by \"Target_Churn\"",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" as t1\nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 and \"Avg_Days_Delinquent\" \u003e 10\ngroup by \"Target_Churn\""
+      },
+      {
+        "mode": "SQL",
+        "id": "619y2N4EpWTe",
+        "runOn": 1637665083030,
+        "runIn": 22,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "35y2Ljg0",
+        "hash": "9e6860a879bf25d0252e3a783b5faaa1",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" as t1\nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 \ngroup by \"Target_Churn\"",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" as t1\nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 \ngroup by \"Target_Churn\""
+      },
+      {
+        "mode": "SQL",
+        "id": "BZ8VsCyN2rPA",
+        "runOn": 1637665090587,
+        "runIn": 19,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "xTgUyKQx",
+        "hash": "559f81fffae02936fe20eac5b159c27e",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 \ngroup by \"Target_Churn\"",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 \ngroup by \"Target_Churn\""
+      },
+      {
+        "mode": "SQL",
+        "id": "94SzQKiuEKAq",
+        "runOn": 1637665118596,
+        "runIn": 60,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "DONE",
+        "futureId": "XGTw2qyj",
+        "hash": "a2f84d39c43a524cf8b867f8b0ac3965",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 \n",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 \n"
+      },
+      {
+        "mode": "SQL",
+        "id": "e7CnyyZOPPxe",
+        "runOn": 1637665136734,
+        "runIn": 20,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "EjXJL2rp",
+        "hash": "297cae0de50de27199643b4096a825f4",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e 50\n",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e 50\n"
+      },
+      {
+        "mode": "SQL",
+        "id": "CyasrnxCHniN",
+        "runOn": 1637665156553,
+        "runIn": 46,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "DONE",
+        "futureId": "0Hc8hdOh",
+        "hash": "66a5c8cbd5029908f32c381153b269e1",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\n",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\n"
+      },
+      {
+        "mode": "SQL",
+        "id": "RH8T4qSUbOXI",
+        "runOn": 1637665172315,
+        "runIn": 43,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "TEvfB2Xs",
+        "hash": "1f88f392efb8c911a22067ea4f3059cb",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by desc \"Avg_Days_Delinquent\"\n",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by desc \"Avg_Days_Delinquent\"\n"
+      },
+      {
+        "mode": "SQL",
+        "id": "PHb5TxQ0FfgD",
+        "runOn": 1637665177974,
+        "runIn": 40,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "DONE",
+        "futureId": "CcK66aN4",
+        "hash": "9e05e7e1b4aa2861bf2ac3df9c40d656",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\"\n",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\"\n"
+      },
+      {
+        "mode": "SQL",
+        "id": "dw5KwBy2NTVL",
+        "runOn": 1637665187237,
+        "runIn": 43,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "DONE",
+        "futureId": "QLlTpvE3",
+        "hash": "5dae2768dd44fd5ba695b75cde7a5ba7",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\" desc\n",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\" desc\n"
+      },
+      {
+        "mode": "SQL",
+        "id": "Aq7CXxqcBcO7",
+        "runOn": 1637665329146,
+        "runIn": 23,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "cpVdZI2W",
+        "hash": "f44521130df08ee14e2a4531ca763b45",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select *, sum(Total_Churn) as Churn_Count from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\" desc\n",
+        "expandedSql": "select *, sum(Total_Churn) as Churn_Count from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\" desc\n"
+      },
+      {
+        "mode": "SQL",
+        "id": "N98hQvhDwk9u",
+        "runOn": 1637665339671,
+        "runIn": 20,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "9eMY0pet",
+        "hash": "53a2d059a2ab31387806b6fe983e8514",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select *, sum(Target_Churn) as Churn_Count from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\" desc\n",
+        "expandedSql": "select *, sum(Target_Churn) as Churn_Count from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\" desc\n"
+      },
+      {
+        "mode": "SQL",
+        "id": "dlch6mXZYnjw",
+        "runOn": 1637665353129,
+        "runIn": 22,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "FAILED",
+        "futureId": "h18P5Zgv",
+        "hash": "c76c153656eca9275aa5427f45a241d5",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select *, sum(\"Target_Churn\") as Churn_Count from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\" desc\n",
+        "expandedSql": "select *, sum(\"Target_Churn\") as Churn_Count from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\" desc\n"
+      },
+      {
+        "mode": "SQL",
+        "id": "i6Uycwg2UhAL",
+        "runOn": 1637665364447,
+        "runIn": 40,
+        "runBy": "Jordan",
+        "connection": "PostgreSQL",
+        "state": "DONE",
+        "futureId": "GE2Ma58x",
+        "hash": "5dae2768dd44fd5ba695b75cde7a5ba7",
+        "querySettings": {
+          "addLimitToStatement": true,
+          "statementsOutOfTransaction": false,
+          "inheritConf": "default",
+          "extraConf": [],
+          "addDkuUdf": false,
+          "statementsParseMode": "SPLIT",
+          "statementsExecutionMode": "PREPARED"
+        },
+        "sql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\" desc\n",
+        "expandedSql": "select * from \"dku_demo\".\"billing\" \nwhere \"State\" \u003d \u0027NORTH CAROLINA\u0027 AND \"Avg_Days_Delinquent\" \u003e \u002750\u0027\norder by \"Avg_Days_Delinquent\" desc\n"
+      }
+    ]
+  }
+}
