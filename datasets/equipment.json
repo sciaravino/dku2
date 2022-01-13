@@ -27,11 +27,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1642092586440
+    "lastModifiedOn": 1642092590826
   },
   "creationTag": {
     "versionNumber": 0,
@@ -61,7 +61,8 @@
       {
         "name": "Account_ID",
         "type": "string",
-        "originalType": "text"
+        "originalType": "text",
+        "meaning": "LongMeaning"
       },
       {
         "name": "Headset_Age",
