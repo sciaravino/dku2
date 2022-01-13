@@ -27,11 +27,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1642092610408
+    "lastModifiedOn": 1642092614701
   },
   "creationTag": {
     "versionNumber": 0,
@@ -61,7 +61,8 @@
       {
         "name": "Account_ID",
         "type": "int",
-        "originalType": "text"
+        "originalType": "text",
+        "meaning": "LongMeaning"
       },
       {
         "name": "Target_Churn",
