@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
-      "login": "Jordan"
+      "login": "admin"
     },
-    "lastModifiedOn": 1635441350745
+    "lastModifiedOn": 1642092307591
   },
   "creationTag": {
     "versionNumber": 0,
@@ -50,7 +50,7 @@
     "partitioningType": "custom",
     "normalizeDoubles": true,
     "table": "${projectKey}_account_prepped",
-    "schema": "dku_demo",
+    "schema": "dku",
     "tableCreationMode": "auto",
     "writeInsertBatchSize": 10000,
     "writeJDBCBadDataBehavior": "DISCARD_ROW",
