@@ -23,7 +23,14 @@
       "items": [
         {
           "ref": "master_table_psql",
-          "deps": []
+          "deps": [
+            {
+              "idim": "dimension_0",
+              "func": "all_available",
+              "params": {},
+              "expandVariables": false
+            }
+          ]
         }
       ]
     }
@@ -40,11 +47,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1635362379054
+    "lastModifiedOn": 1642092341946
   },
   "creationTag": {
     "versionNumber": 0,
