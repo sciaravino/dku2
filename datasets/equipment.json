@@ -27,11 +27,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1642092590826
+    "lastModifiedOn": 1642092600296
   },
   "creationTag": {
     "versionNumber": 0,
@@ -60,7 +60,7 @@
     "columns": [
       {
         "name": "Account_ID",
-        "type": "string",
+        "type": "int",
         "originalType": "text",
         "meaning": "LongMeaning"
       },
