@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 9,
+    "versionNumber": 10,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1642092627656
+    "lastModifiedOn": 1642092630963
   },
   "creationTag": {
     "versionNumber": 0,
@@ -61,7 +61,8 @@
     "columns": [
       {
         "name": "Account_ID",
-        "type": "int"
+        "type": "int",
+        "meaning": "LongMeaning"
       },
       {
         "name": "Acct_Plan_Type",
